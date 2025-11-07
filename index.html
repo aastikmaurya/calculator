@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calculator" class="calculator-basic">
+        <div class="calculator-title">
+            <h2 class="calc-btn">Calculator</h2>
+        </div>
+        <div class="display-container">
+            <input type="text" id="display" class="calc-display" readonly value="0">
+        </div>
+        
+        <!-- Basic Calculator -->
+        <div id="basicCalc" class="button-grid">
+            <button onclick="clearDisplay()" class="btn btn-red calc-btn">C</button>
+            <button onclick="deleteLast()" class="btn btn-orange calc-btn">⌫</button>
+            <button onclick="appendToDisplay('/')" class="btn btn-blue calc-btn">÷</button>
+            <button onclick="appendToDisplay('*')" class="btn btn-blue calc-btn">×</button>
+            
+            <button onclick="appendToDisplay('7')" class="btn btn-gray calc-btn">7</button>
+            <button onclick="appendToDisplay('8')" class="btn btn-gray calc-btn">8</button>
+            <button onclick="appendToDisplay('9')" class="btn btn-gray calc-btn">9</button>
+            <button onclick="appendToDisplay('-')" class="btn btn-blue calc-btn">−</button>
+            
+            <button onclick="appendToDisplay('4')" class="btn btn-gray calc-btn">4</button>
+            <button onclick="appendToDisplay('5')" class="btn btn-gray calc-btn">5</button>
+            <button onclick="appendToDisplay('6')" class="btn btn-gray calc-btn">6</button>
+            <button onclick="appendToDisplay('+')" class="btn btn-blue calc-btn">+</button>
+            
+            <button onclick="appendToDisplay('1')" class="btn btn-gray calc-btn">1</button>
+            <button onclick="appendToDisplay('2')" class="btn btn-gray calc-btn">2</button>
+            <button onclick="appendToDisplay('3')" class="btn btn-gray calc-btn">3</button>
+            <button onclick="calculate()" class="btn btn-green calc-btn">＝</button>
+            
+            <button onclick="appendToDisplay('0')" class="btn btn-gray btn-wide calc-btn">0</button>
+            <button onclick="appendToDisplay('.')" class="btn btn-gray calc-btn">•</button>
+        </div>
+        
+        <!-- Scientific Calculator -->
+        <div id="scientificCalc" class="hidden">
+            <div class="scientific-grid-5">
+                <button onclick="appendFunction('sin(')" class="btn btn-indigo calc-btn">sin</button>
+                <button onclick="appendFunction('cos(')" class="btn btn-indigo calc-btn">cos</button>
+                <button onclick="appendFunction('tan(')" class="btn btn-indigo calc-btn">tan</button>
+                <button onclick="appendFunction('log(')" class="btn btn-indigo calc-btn">log</button>
+                <button onclick="appendFunction('ln(')" class="btn btn-indigo calc-btn">ln</button>
+            </div>
+            <div class="scientific-grid-5">
+                <button onclick="appendToDisplay('Math.PI')" class="btn btn-teal calc-btn">π</button>
+                <button onclick="appendToDisplay('Math.E')" class="btn btn-teal calc-btn">e</button>
+                <button onclick="appendFunction('Math.pow(')" class="btn btn-teal calc-btn">x^y</button>
+                <button onclick="appendFunction('Math.sqrt(')" class="btn btn-teal calc-btn">√</button>
+                <button onclick="appendToDisplay('!')" class="btn btn-teal calc-btn">x!</button>
+            </div>
+            <div class="scientific-grid-4">
+                <button onclick="clearDisplay()" class="btn btn-red calc-btn">C</button>
+                <button onclick="deleteLast()" class="btn btn-orange calc-btn">⌫</button>
+                <button onclick="appendToDisplay('/')" class="btn btn-blue calc-btn">÷</button>
+                <button onclick="appendToDisplay('*')" class="btn btn-blue calc-btn">×</button>
+                
+                <button onclick="appendToDisplay('7')" class="btn btn-gray calc-btn">7</button>
+                <button onclick="appendToDisplay('8')" class="btn btn-gray calc-btn">8</button>
+                <button onclick="appendToDisplay('9')" class="btn btn-gray calc-btn">9</button>
+                <button onclick="appendToDisplay('-')" class="btn btn-blue calc-btn">−</button>
+                
+                <button onclick="appendToDisplay('4')" class="btn btn-gray calc-btn">4</button>
+                <button onclick="appendToDisplay('5')" class="btn btn-gray calc-btn">5</button>
+                <button onclick="appendToDisplay('6')" class="btn btn-gray calc-btn">6</button>
+                <button onclick="appendToDisplay('+')" class="btn btn-blue calc-btn">+</button>
+                
+                <button onclick="appendToDisplay('1')" class="btn btn-gray calc-btn">1</button>
+                <button onclick="appendToDisplay('2')" class="btn btn-gray calc-btn">2</button>
+                <button onclick="appendToDisplay('3')" class="btn btn-gray calc-btn">3</button>
+                <button onclick="calculate()" class="btn btn-green calc-btn">＝</button>
+                
+                <button onclick="appendToDisplay('0')" class="btn btn-gray btn-wide calc-btn">0</button>
+                <button onclick="appendToDisplay('.')" class="btn btn-gray calc-btn">•</button>
+            </div>
+        </div>
+        
+        <!-- Switch Button -->
+        <div class="switch-container">
+            <button onclick="toggleCalculator()" class="btn btn-purple calc-btn">Switch</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
