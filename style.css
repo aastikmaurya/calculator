@@ -1,0 +1,213 @@
+/* Calculator Styles */
+.calc-display { 
+    font-family: 'JetBrains Mono', 'Courier New', monospace; 
+}
+
+.calc-btn { 
+    font-family: 'JetBrains Mono', 'Arial', sans-serif; 
+}
+
+/* Body and Layout */
+body {
+    background: linear-gradient(to bottom right, #f3f4f6, #e5e7eb);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Calculator Container */
+#calculator {
+    background-color: #e5e7eb;
+    padding: 1.8rem;
+    border-radius: 0.675rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    width: 25.2rem;
+    border: 1px solid #d1d5db;
+}
+
+/* Title */
+.calculator-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.35rem;
+}
+
+.calculator-title h2 {
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: #374151;
+}
+
+/* Display */
+.display-container {
+    margin-bottom: 1.35rem;
+}
+
+#display {
+    width: 100%;
+    padding: 1.35rem;
+    text-align: right;
+    font-size: 2.25rem;
+    background-color: #4b5563;
+    color: white;
+    border: 2px solid #6b7280;
+    border-radius: 0.675rem;
+    box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Button Grid */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.125rem;
+}
+
+.scientific-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.675rem;
+    margin-bottom: 0.9rem;
+}
+
+.scientific-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.125rem;
+}
+
+/* Button Styles */
+.btn {
+    padding: 1.35rem;
+    border-radius: 0.675rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    min-height: 3.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+/* Button Colors */
+.btn-red {
+    background-color: #ef4444;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.btn-red:hover {
+    background-color: #dc2626;
+}
+
+.btn-orange {
+    background-color: #f97316;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.btn-orange:hover {
+    background-color: #ea580c;
+}
+
+.btn-blue {
+    background-color: #2563eb;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.btn-blue:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-gray {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    font-size: 1.5rem;
+    border: 1px solid #d1d5db;
+}
+
+.btn-gray:hover {
+    background-color: #e5e7eb;
+}
+
+.btn-green {
+    background-color: #16a34a;
+    color: white;
+    font-size: 1.875rem;
+    grid-row: span 2;
+}
+
+.btn-green:hover {
+    background-color: #15803d;
+}
+
+.btn-purple {
+    background-color: #9333ea;
+    color: white;
+    font-size: 1.125rem;
+    width: 100%;
+}
+
+.btn-purple:hover {
+    background-color: #7c3aed;
+}
+
+.btn-indigo {
+    background-color: #6366f1;
+    color: white;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.btn-indigo:hover {
+    background-color: #4f46e5;
+}
+
+.btn-teal {
+    background-color: #14b8a6;
+    color: white;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.btn-teal:hover {
+    background-color: #0d9488;
+}
+
+/* Special Button Layouts */
+.btn-wide {
+    grid-column: span 2;
+}
+
+.btn-tall {
+    grid-row: span 2;
+}
+
+/* Switch Button */
+.switch-container {
+    margin-top: 1.35rem;
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+/* Scientific Calculator Adjustments */
+.scientific-mode {
+    width: 28.8rem;
+}
